@@ -73,7 +73,7 @@
       <small class="text-danger" *ngIf="submitted && !person.lastname">Lastname is required.</small>
     </div>
     <div class="p-field px-3 mt-2 mb-2">
-      <label class="p-mb-3 mb-1">Department</label>
+      <label for="departement" class="p-mb-3 mb-1">Department</label>
       <div class="p-formgrid p-grid mt-1">
         <div class="p-field-radiobutton p-col-6" *ngFor="let department of departments;">
           <p-radioButton id="departement" name="id_department" value="{{department.id}}"
