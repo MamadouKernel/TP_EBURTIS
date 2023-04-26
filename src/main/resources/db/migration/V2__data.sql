@@ -6,8 +6,9 @@
 INSERT INTO departments
 (code,designation, created_at,updated_at)
 VALUES
-('TY859663', 'Departement informatique', '2023-04-05','2023-04-05'),
-('FF78200','Departement RH','2023-04-05','2023-04-05');
+('Dpt-iNFO', 'Departement informatique', '2023-04-05','2023-04-05'),
+('Dpt-RH','Departement RHCOM','2023-04-05','2023-04-05'),
+('Dpt-GesCom','Departement GesCOM','2023-04-05','2023-04-05');
 
 
 /* Table persons */

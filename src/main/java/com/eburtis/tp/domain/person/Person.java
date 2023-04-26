@@ -1,6 +1,6 @@
-package com.eburtis.tp.models.person;
+package com.eburtis.tp.domain.person;
 
-import com.eburtis.tp.models.department.Department;
+import com.eburtis.tp.domain.department.Department;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;

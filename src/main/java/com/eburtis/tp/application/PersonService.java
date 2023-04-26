@@ -1,7 +1,7 @@
 package com.eburtis.tp.application;
 
-import com.eburtis.tp.models.person.Person;
-import com.eburtis.tp.models.person.PersonVo;
+import com.eburtis.tp.domain.person.Person;
+import com.eburtis.tp.domain.person.PersonVo;
 
 
 import java.util.List;

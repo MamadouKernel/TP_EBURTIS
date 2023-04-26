@@ -1,6 +1,6 @@
 package com.eburtis.tp.interfaces;
 
-import com.eburtis.tp.models.department.DepartmentRepository;
+import com.eburtis.tp.domain.department.DepartmentRepository;
 import org.json.JSONObject;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,12 +35,6 @@ public class DepartmentControllerTest {
     private JSONObject jsonObject;
     private String endpoint = "/v1/api/rest";
 
-    // @BeforeAll
-    // @AfterAll
-    // public void cleanDatabase(){
-    // this.departmentRepository.deleteAll();
-    // jsonObject = null;
-    //    }
 
     /***********************************
      * Create a department Test

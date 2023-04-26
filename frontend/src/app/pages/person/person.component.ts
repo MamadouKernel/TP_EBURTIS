@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from "../../models/person";
 import { ApiService } from "../../services/api.service";
-import { ConfirmationService } from 'primeng/api';
+import {ConfirmationService, FilterMatchMode, PrimeNGConfig} from 'primeng/api';
 import { MessageService } from 'primeng/api';
-import { ToastModule } from 'primeng/toast';
 import { Department } from "../../models/department";
 
 @Component({
@@ -20,8 +19,16 @@ export class PersonComponent implements OnInit {
   person: Person;
   selectedPersons: Person[] = [];
   submitted: boolean = false;
-  constructor(private apiService: ApiService, private messageService: MessageService, private confirmationService: ConfirmationService) { }
+  constructor(
+    private apiService: ApiService,
+    private messageService: MessageService,
+    private confirmationService: ConfirmationService,
+    private primeConfig:PrimeNGConfig) { }
   ngOnInit() {
+
+    this.primeConfig.filterMatchModeOptions = {text: [], numeric: [
+      FilterMatchMode.LESS_THAN,FilterMatchMode.GREATER_THAN,FilterMatchMode.EQUALS
+      ], date: []};
 
     // method getAllPersons
     this.getAllPersonne()
@@ -61,7 +68,6 @@ export class PersonComponent implements OnInit {
       icon: 'pi pi-exclamation-triangle',
         accept: () => {
           this.persons = this.persons.filter(val => !this.selectedPersons.includes(val));
-           //this.selectedPersons = null;
           this.messageService.add({severity:'success', summary: 'Successful', detail: 'Persons Deleted', life: 3000});
         }
     });
@@ -83,7 +89,6 @@ export class PersonComponent implements OnInit {
           next: data => {
             console.log(data)
             this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Person Deleted', life: 3000 });
-            // window.location.reload();
             this.getAllPersonne()
           },
           error: err => {
@@ -102,13 +107,10 @@ export class PersonComponent implements OnInit {
   savePerson() {
     this.submitted = true;
 
-    if (this.person.firstname!.trim()) {
+    if (this.person.firstname!.trim() && this.person.lastname!.trim() && this.person.age && this.person.department) {
       if (this.person.id) {
-        // console.log(this.person)
-        // console.log(this.person.id)
         this.apiService.updatePerson(this.person).subscribe({
           next: data => {
-            // console.log(data);
             this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Person Updated', life: 3000 });
             this.getAllPersonne();
           },

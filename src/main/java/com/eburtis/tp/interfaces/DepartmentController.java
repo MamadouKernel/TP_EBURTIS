@@ -1,8 +1,8 @@
 package com.eburtis.tp.interfaces;
 
 import com.eburtis.tp.application.DepartmentService;
-import com.eburtis.tp.models.department.Department;
-import com.eburtis.tp.models.department.DepartmentVo;
+import com.eburtis.tp.domain.department.Department;
+import com.eburtis.tp.domain.department.DepartmentVo;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +25,6 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
     private final Logger logger = LoggerFactory.getLogger(DepartmentController.class);
-
 
     /**
      * Get department by id

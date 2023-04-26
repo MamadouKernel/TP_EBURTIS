@@ -1,9 +1,9 @@
 package com.eburtis.tp.infrastructure;
 
 import com.eburtis.tp.application.DepartmentService;
-import com.eburtis.tp.models.department.Department;
-import com.eburtis.tp.models.department.DepartmentRepository;
-import com.eburtis.tp.models.department.DepartmentVo;
+import com.eburtis.tp.domain.department.Department;
+import com.eburtis.tp.domain.department.DepartmentRepository;
+import com.eburtis.tp.domain.department.DepartmentVo;
 import com.eburtis.tp.exceptions.EntityNotFoundException;
 import com.eburtis.tp.exceptions.ErrorCodes;
 import com.eburtis.tp.exceptions.InvalidEntityException;
@@ -41,28 +41,10 @@ public class DepartmentImplementation implements DepartmentService {
      */
     @Override
     public Department save(Department departmentVo) {
-//        List<String> errors = EntityValidator.departmentValidate(departmentVo);
-//        if (!errors.isEmpty()) {
-//            log.error("Department is not valid {}", departmentVo);
-//            throw new InvalidEntityException("Departement n'est pas valide", ErrorCodes.DEPARTMENT_NOT_VALID, errors);
-//        }
         return
                 departmentRepository.save(departmentVo);
 
     }
-//    public DepartmentVo save(DepartmentVo departmentVo) {
-//        List<String> errors = EntityValidator.departmentValidate(departmentVo);
-//        if (!errors.isEmpty()) {
-//            log.error("Department is not valid {}", departmentVo);
-//            throw new InvalidEntityException("Departement n'est pas valide", ErrorCodes.DEPARTMENT_NOT_VALID, errors);
-//        }
-//        return DepartmentVo.fromEntity(
-//                departmentRepository.save(
-//                        DepartmentVo.toEntity(departmentVo)
-//                )
-//        );
-//
-//    }
 
     /**
      * @param id
@@ -135,8 +117,4 @@ public class DepartmentImplementation implements DepartmentService {
         }
         departmentRepository.deleteById(idDepartment);
     }
-
-
-
-
 }

@@ -49,21 +49,49 @@ describe('PersonComponent', () => {
     spyOn(component, 'getAllPersonne')
     const person = {
         id: 2,
-        firstname: 'Melissa',
-        lastname: 'Kouadio',
-        age:36
+        firstname: 'Mamadou K',
+        lastname: 'KONATE',
+        age:26
       }
       // const submit = true;
       component.person = person;
       // component.submitted = submit;
       apiServiceStub.updatePerson.and.returnValue(of(component.person));
-
-
       component.savePerson();
-
-
+      expect(component.getAllPersonne).toHaveBeenCalled();
       expect(apiServiceStub.updatePerson).toHaveBeenCalledWith(person.id, person);
-
-
   });
+
+  
+  // it('should delete person',  () =>{
+  //   spyOn(component, 'getAllPersonne')
+  //   const person = {
+  //     id: 2,
+  //     firstname: 'Mamadou K',
+  //     lastname: 'KONATE',
+  //     age:26
+  //   }
+  //   component.person = person;
+  //   apiServiceStub.updatePerson.and.returnValue(of(component.person));
+  //   component.deleteProduct(person);
+  //   expect(component.getAllPersonne).toHaveBeenCalled();
+  //   expect(apiServiceStub.updatePerson).toHaveBeenCalledWith(person.id, person);
+  // });
+
+  // it('should open dialog',  () =>{
+  //   component.openNew();
+  //   expect(component.personDialog).toBeTrue();
+  // });
+
+  // it('should get all persons from the ApiService', () => {
+  //   // On appelle la méthode getAllPersonne et on s'assure que le service ApiService a été appelé
+  //   component.getAllPersonne();
+  //   expect(apiServiceStub.getAllPersons).toHaveBeenCalled();
+  // });
+  
+
+
+
+
+
 });

@@ -9,7 +9,7 @@ import {Person} from "../models/person";
 export class ApiService   {
 
   constructor(private http: HttpClient) { }
-  rootURL = 'http://localhost:8080/v1/api/rest';
+  rootURL = 'http://localhost:8091/v1/api/rest';
 
   httpHeaders() {
     return new HttpHeaders({
@@ -30,7 +30,7 @@ export class ApiService   {
     return this.http.get(this.rootURL + '/department',{headers : this.httpHeaders()});
 
   }
-  
+
   createPerson(data: any): Observable<Person> {
     console.log("service log");
     console.log(data);

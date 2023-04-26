@@ -1,5 +1,5 @@
-package com.eburtis.tp.models.person;
-import com.eburtis.tp.models.department.Department;
+package com.eburtis.tp.domain.person;
+import com.eburtis.tp.domain.department.Department;
 import lombok.Builder;
 
 @Builder

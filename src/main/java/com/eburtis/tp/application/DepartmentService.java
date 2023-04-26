@@ -1,7 +1,7 @@
 package com.eburtis.tp.application;
 
-import com.eburtis.tp.models.department.Department;
-import com.eburtis.tp.models.department.DepartmentVo;
+import com.eburtis.tp.domain.department.Department;
+import com.eburtis.tp.domain.department.DepartmentVo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

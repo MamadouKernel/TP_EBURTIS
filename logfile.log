@@ -1083,7 +1083,7 @@ Unconditional classes:
 2023-04-17T10:11:20.738Z DEBUG 21811 --- [main] o.s.boot.devtools.restart.Restarter      : Creating new Restarter for thread Thread[main,5,main]
 2023-04-17T10:11:20.740Z DEBUG 21811 --- [main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
 2023-04-17T10:11:21.198Z DEBUG 21811 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.eburtis.tp.interfaces.PersonController#savePerson(PersonVo)
-2023-04-17T10:11:21.367Z DEBUG 21811 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.eburtis.tp.models.person.PersonVo@64ff0eaa]
+2023-04-17T10:11:21.367Z DEBUG 21811 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.eburtis.tp.domain.person.PersonVo@64ff0eaa]
 2023-04-17T10:11:21.480Z DEBUG 21811 --- [main] org.hibernate.SQL                        : 
     insert 
     into
@@ -1092,7 +1092,7 @@ Unconditional classes:
     values
         (?, ?, ?, ?, ?, ?)
 2023-04-17T10:11:21.576Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2023-04-17T10:11:21.583Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.eburtis.tp.models.person.PersonVo@282079b9]
+2023-04-17T10:11:21.583Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.eburtis.tp.domain.person.PersonVo@282079b9]
 2023-04-17T10:11:21.858Z DEBUG 21811 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.eburtis.tp.interfaces.PersonController#fetchPersonById(Long)
 2023-04-17T10:11:21.931Z DEBUG 21811 --- [main] org.hibernate.SQL                        : 
     select
@@ -1115,7 +1115,7 @@ Unconditional classes:
     where
         p1_0.id=?
 2023-04-17T10:11:21.981Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2023-04-17T10:11:21.992Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.eburtis.tp.models.person.PersonVo@64c1a76e]
+2023-04-17T10:11:21.992Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.eburtis.tp.domain.person.PersonVo@64c1a76e]
 2023-04-17T10:11:22.021Z DEBUG 21811 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.eburtis.tp.interfaces.PersonController#fetchAllPerson()
 2023-04-17T10:11:22.189Z DEBUG 21811 --- [main] org.hibernate.SQL                        : 
     select
@@ -1153,9 +1153,9 @@ Unconditional classes:
     where
         d1_0.id=?
 2023-04-17T10:11:22.223Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2023-04-17T10:11:22.224Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.eburtis.tp.models.person.PersonVo@5276330a, com.eburtis.tp.models.person.PersonVo@221961f2, com (truncated)...]
+2023-04-17T10:11:22.224Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[com.eburtis.tp.domain.person.PersonVo@5276330a, com.eburtis.tp.domain.person.PersonVo@221961f2, com (truncated)...]
 2023-04-17T10:11:22.254Z DEBUG 21811 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.eburtis.tp.interfaces.PersonController#updatePerson(Long, PersonVo)
-2023-04-17T10:11:22.259Z DEBUG 21811 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.eburtis.tp.models.person.PersonVo@6f45be42]
+2023-04-17T10:11:22.259Z DEBUG 21811 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.eburtis.tp.domain.person.PersonVo@6f45be42]
 2023-04-17T10:11:22.262Z DEBUG 21811 --- [main] org.hibernate.SQL                        : 
     select
         p1_0.id,
@@ -1188,7 +1188,7 @@ Unconditional classes:
     where
         id=?
 2023-04-17T10:11:22.317Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2023-04-17T10:11:22.318Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.eburtis.tp.models.person.Person@12922d53]
+2023-04-17T10:11:22.318Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.eburtis.tp.domain.person.Person@12922d53]
 2023-04-17T10:11:22.338Z DEBUG 21811 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.eburtis.tp.interfaces.PersonController#deletePerson(Long)
 2023-04-17T10:11:22.342Z DEBUG 21811 --- [main] org.hibernate.SQL                        : 
     select
@@ -1247,7 +1247,7 @@ Unconditional classes:
 2023-04-17T10:11:22.530Z  INFO 21811 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.eburtis.tp.TpApplication for test class com.eburtis.tp.interfaces.DepartmentControllerTest
 2023-04-17T10:11:22.534Z DEBUG 21811 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners for test class [DepartmentControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
 2023-04-17T10:11:22.547Z DEBUG 21811 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.eburtis.tp.interfaces.DepartmentController#saveDepartment(Department)
-2023-04-17T10:11:22.559Z DEBUG 21811 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.eburtis.tp.models.department.Department@5fe19d0e]
+2023-04-17T10:11:22.559Z DEBUG 21811 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.eburtis.tp.domain.department.Department@5fe19d0e]
 2023-04-17T10:11:22.573Z DEBUG 21811 --- [main] org.hibernate.SQL                        : 
     insert 
     into
@@ -1256,7 +1256,7 @@ Unconditional classes:
     values
         (?, ?, ?, ?)
 2023-04-17T10:11:22.581Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2023-04-17T10:11:22.582Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.eburtis.tp.models.department.Department@5fe19d0e]
+2023-04-17T10:11:22.582Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.eburtis.tp.domain.department.Department@5fe19d0e]
 2023-04-17T10:11:22.605Z DEBUG 21811 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.eburtis.tp.interfaces.DepartmentController#fetchDepartmentById(Long)
 2023-04-17T10:11:22.609Z DEBUG 21811 --- [main] org.hibernate.SQL                        : 
     select
@@ -1270,7 +1270,7 @@ Unconditional classes:
     where
         d1_0.id=?
 2023-04-17T10:11:22.625Z DEBUG 21811 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2023-04-17T10:11:22.627Z DEBUG 21811 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.eburtis.tp.models.department.DepartmentVo@78a46d7b]
+2023-04-17T10:11:22.627Z DEBUG 21811 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.eburtis.tp.domain.department.DepartmentVo@78a46d7b]
 2023-04-17T10:11:22.648Z DEBUG 21811 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.eburtis.tp.interfaces.DepartmentController#fetchAllDepartment()
 2023-04-17T10:11:22.653Z DEBUG 21811 --- [main] org.hibernate.SQL                        : 
     select
@@ -1282,9 +1282,9 @@ Unconditional classes:
     from
         departments d1_0
 2023-04-17T10:11:22.662Z DEBUG 21811 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2023-04-17T10:11:22.664Z DEBUG 21811 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[com.eburtis.tp.models.department.DepartmentVo@203ba07, com.eburtis.tp.models.department.DepartmentV (truncated)...]
+2023-04-17T10:11:22.664Z DEBUG 21811 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[com.eburtis.tp.domain.department.DepartmentVo@203ba07, com.eburtis.tp.domain.department.DepartmentV (truncated)...]
 2023-04-17T10:11:22.690Z DEBUG 21811 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.eburtis.tp.interfaces.DepartmentController#updateDepartment(Long, DepartmentVo)
-2023-04-17T10:11:22.696Z DEBUG 21811 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.eburtis.tp.models.department.DepartmentVo@116fe252]
+2023-04-17T10:11:22.696Z DEBUG 21811 --- [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.eburtis.tp.domain.department.DepartmentVo@116fe252]
 2023-04-17T10:11:22.703Z DEBUG 21811 --- [main] org.hibernate.SQL                        : 
     select
         d1_0.id,
@@ -1306,7 +1306,7 @@ Unconditional classes:
     where
         id=?
 2023-04-17T10:11:22.718Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2023-04-17T10:11:22.719Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.eburtis.tp.models.department.Department@68cc6fa4]
+2023-04-17T10:11:22.719Z DEBUG 21811 --- [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.eburtis.tp.domain.department.Department@68cc6fa4]
 2023-04-17T10:11:22.734Z DEBUG 21811 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.eburtis.tp.interfaces.DepartmentController#deleteDepartment(Long)
 2023-04-17T10:11:22.740Z DEBUG 21811 --- [main] org.hibernate.SQL                        : 
     select
@@ -2392,3 +2392,18 @@ Unconditional classes:
 2023-04-17T10:11:24.702Z DEBUG 21811 --- [main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
 2023-04-17T10:11:24.743Z DEBUG 21811 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4bf324f9, started on Mon Apr 17 10:11:14 GMT 2023
 2023-04-17T10:11:24.807Z DEBUG 21811 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@4dd28982, started on Mon Apr 17 10:11:22 GMT 2023
+2023-04-25T16:23:49.435+02:00 ERROR 9324 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-04-25T16:35:54.515+02:00 ERROR 11284 --- [http-nio-8091-exec-4] c.e.t.i.PersonImplementation             : Person is not valid com.eburtis.tp.domain.person.PersonVo@531d5d25

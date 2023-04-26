@@ -1,9 +1,9 @@
 package com.eburtis.tp.infrastructure;
 
 import com.eburtis.tp.application.PersonService;
-import com.eburtis.tp.models.person.Person;
-import com.eburtis.tp.models.person.PersonRepository;
-import com.eburtis.tp.models.person.PersonVo;
+import com.eburtis.tp.domain.person.Person;
+import com.eburtis.tp.domain.person.PersonRepository;
+import com.eburtis.tp.domain.person.PersonVo;
 import com.eburtis.tp.exceptions.*;
 import com.eburtis.tp.validator.EntityValidator;
 import lombok.extern.slf4j.Slf4j;
@@ -45,7 +45,6 @@ public class PersonImplementation implements PersonService {
             log.error("Person is not valid {}", person);
             throw new InvalidEntityException("Personne n'est pas valide", ErrorCodes.PERSON_NOT_VALID, errors);
         }
-
 
         return PersonVo.fromEntity(
                 personRepository.save(
@@ -133,6 +132,4 @@ public class PersonImplementation implements PersonService {
         }
         personRepository.deleteById(idPerson);
     }
-
-
 }

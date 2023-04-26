@@ -1,6 +1,6 @@
-package com.eburtis.tp.models.department;
+package com.eburtis.tp.domain.department;
 
-import com.eburtis.tp.models.person.Person;
+import com.eburtis.tp.domain.person.Person;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;

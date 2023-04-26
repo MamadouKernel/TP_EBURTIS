@@ -1,7 +1,7 @@
 package com.eburtis.tp.validator;
 
-import com.eburtis.tp.models.department.DepartmentVo;
-import com.eburtis.tp.models.person.PersonVo;
+import com.eburtis.tp.domain.department.DepartmentVo;
+import com.eburtis.tp.domain.person.PersonVo;
 import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
@@ -27,16 +27,11 @@ public class EntityValidator {
             errors.add("Veuillez renseigner le nom");
         }
 
-//        if (vo.getAge() == Integer.parseInt(null)) {
-//            errors.add("Veuillez renseigner l'age");
-//        }
-
         if (vo.getDepartment() == null || vo.getDepartment().getId() == null) {
             errors.add("Veuillez selectionner un departement");
         }
         return errors;
     }
-
 
     public static List<String> departmentValidate(DepartmentVo vo) {
         List<String> errors = new ArrayList<>();

@@ -1,4 +1,4 @@
-package com.eburtis.tp.models.department;
+package com.eburtis.tp.domain.department;
 
 import lombok.Builder;
 
