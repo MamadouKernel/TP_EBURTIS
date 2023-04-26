@@ -1,7 +1,7 @@
 <div class="py-3 py-6 ">
   <div class="card-container">
     <p-toast></p-toast>
-    <p-table #dt [value]="persons" [rows]="5" [paginator]="true" [globalFilterFields]="['age']"
+    <p-table #dt [value]="persons" [rows]="5" [paginator]="true" [globalFilterFields]="['age','lastname','firstname','department.designation']"
     [(selection)]="selectedPersons"[rowHover]="true" dataKey="id"
       currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [showCurrentPageReport]="true">
       <ng-template pTemplate="caption">
