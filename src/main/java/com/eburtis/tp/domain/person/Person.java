@@ -93,4 +93,10 @@ public class Person {
         this.department = department;
     }
 
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
 }

@@ -3,7 +3,7 @@ import com.eburtis.tp.domain.department.Department;
 import lombok.Builder;
 
 @Builder
-public final  class PersonVo {
+public class PersonVo {
     private Long id;
     private String firstname;
     private String lastname;
