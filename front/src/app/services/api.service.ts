@@ -24,8 +24,8 @@ export class ApiService {
     return this.http.get<Person[]>(this.urlServeurApi + '/person',{headers : this.httpHeaders()});
   }
 
-  getAllDepartment(){
-    return this.http.get(this.urlServeurApi + '/department',{headers : this.httpHeaders()});
+  getAllDepartment() : Observable<any[]>{
+    return this.http.get<any[]>(this.urlServeurApi + '/department',{headers : this.httpHeaders()});
   }
 
   createPerson(data: any): Observable<Person> {

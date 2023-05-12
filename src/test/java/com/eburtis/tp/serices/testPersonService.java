@@ -11,12 +11,15 @@ import com.eburtis.tp.utils.DepartmentMb;
 import com.eburtis.tp.utils.DepatmentVoMb;
 import com.eburtis.tp.utils.PersonMb;
 import com.eburtis.tp.utils.PersonVoMb;
+import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Optional;
 
@@ -25,8 +28,9 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class testPersonService {
+
    @Mock
-    private PersonRepository personRepository;
+   private PersonRepository personRepository;
 
     @Mock
     private DepartmentRepository departmentRepository;
@@ -37,29 +41,37 @@ public class testPersonService {
    //create department et person
     //create department
     Long id_department = 1L;
-    Department depat = new DepartmentMb()
-            .setId(id_department)
-            .setCode("D1")
-            .setDesignation("Direction")
-            .build();
+    private Person person;
+    private Department depat;
 
-    //create person
-    Person person = new PersonMb()
-           .setId(1L)
-           .setFirstName("Konate")
-           .setLastName("Mamadou")
-           .setAge(190)
-           .setDepartment(depat)
-           .build();
+    private PersonVo personVo;
 
-    //create personVo
-    PersonVo personVo = new PersonVoMb()
-           .setId(1L)
-           .setFirstname("Konate")
-           .setLastname("Mamadou")
-           .setAge(590)
-           .setDepartment(depat)
-           .build();
+    @Before
+    public void setup(){
+        depat = new DepartmentMb()
+                .setId(id_department)
+                .setCode("D1")
+                .setDesignation("Direction")
+                .build();
+
+        //create person
+        person = new PersonMb()
+                .setId(1L)
+                .setFirstName("Konate")
+                .setLastName("Mamadou")
+                .setAge(190)
+                .setDepartment(depat)
+                .build();
+
+        //create personVo
+        personVo = new PersonVoMb()
+                .setId(1L)
+                .setFirstname("Konate")
+                .setLastname("Mamadou")
+                .setAge(590)
+                .setDepartment(depat)
+                .build();
+    }
    @Test
     public void testCreatePerson(){
     when(departmentRepository.findById(id_department)).thenReturn(Optional.of(depat));

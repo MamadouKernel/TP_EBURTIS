@@ -60,7 +60,6 @@ import { MainComponent } from './pages/main/main.component';
     ButtonModule,
     ToastModule,
     FileUploadModule,
-    ConfirmDialogModule,
   ],
   providers: [MessageService, ConfirmationService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
